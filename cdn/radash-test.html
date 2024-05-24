@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+    import { isSymbol, isNumber, isDate } from './radash.esm.js'
+
+    const SYMBOL1 = Symbol('test')
+    const NUMBER = 1
+    const STR = 'xxxx'
+    const BOOLEAN = true;
+    const OBJ = {};
+    const ARR = [];
+    const FUNC = () => {};
+    const DATE = new Date();
+
+    console.log('isSymbol(SYMBOL1) :>> ', isSymbol(SYMBOL1));
+    console.log('isNumber(NUMBER) :>> ', isNumber(NUMBER));
+    console.log('isNumber(STR) :>> ', isNumber(STR));
+    console.log('isNumber(NaN) :>> ', isNumber(NaN));
+    console.log('isDate(DATE) :>> ', isDate(DATE));
+    console.log('isDate(STR) :>> ', isDate(STR));
+  </script>
+</body>
+</html>
